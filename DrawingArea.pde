@@ -36,6 +36,7 @@
  *                                                                              *
  ********************************************************************************/
 
+ /* @pjs preload="data/animation_play.png, data/animation_pause.png, data/button1_enabled.png, data/button1_disabled.png, data/button2_enabled.png, data/button2_disabled.png"; */
 class DrawingArea {
  /********************************************************************************
   *                                                                              *
@@ -373,10 +374,10 @@ class DrawingArea {
   private void drawAnimationBox() {
     PImage animationImage;
     if( playAnimationB ) {
-      animationImage = loadImage("animation_pause.png");
+      animationImage = loadImage("data/animation_pause.png");
     }
     else {
-      animationImage = loadImage("animation_play.png");
+      animationImage = loadImage("data/animation_play.png");
     }
     image(animationImage, 0, 0);
     ellipse(progress_bar_x, DEFAULT_PROGRESS_ELLIPSE_Y, DEFAULT_PROGRESS_ELLIPSE_RADIUS, DEFAULT_PROGRESS_ELLIPSE_RADIUS);
@@ -425,11 +426,11 @@ class DrawingArea {
     translate(DEFAULT_LEFT_BOX_WIDTH + DEFAULT_BOTTOM_BOX_GRAPHICS_X_OFFSET, DEFAULT_BOTTOM_BOX_GRAPHICS_Y_OFFSET);
     if( peopleDead.getShowMalesFemales() ) {
       drawBox(DEFAULT_ENABLED_COLOR, COLOR_WHITE, DEFAULT_BOTTOM_BUTTON1_GRAPHICS_WIDTH, DEFAULT_BOTTOM_BOX_GRAPHICS_HEIGHT);
-      button1 = loadImage("button1_enabled.png");
+      button1 = loadImage("data/button1_enabled.png");
     }
     else {
       drawBox(DEFAULT_BACKGROUND_COLOR, COLOR_BLACK, DEFAULT_BOTTOM_BUTTON1_GRAPHICS_WIDTH, DEFAULT_BOTTOM_BOX_GRAPHICS_HEIGHT);
-      button1 = loadImage("button1_disabled.png");
+      button1 = loadImage("data/button1_disabled.png");
     }
     image(button1, 2, 2);
 
@@ -447,11 +448,11 @@ class DrawingArea {
     translate(DEFAULT_BOTTOM_BUTTON1_GRAPHICS_WIDTH + DEFAULT_BOTTOM_BOX_GRAPHICS_X_OFFSET, 0);
     if( peopleDead.getShowAges() ) {
       drawBox(DEFAULT_ENABLED_COLOR, COLOR_WHITE, DEFAULT_BOTTOM_BUTTON2_GRAPHICS_WIDTH, DEFAULT_BOTTOM_BOX_GRAPHICS_HEIGHT);
-      button2 = loadImage("button2_enabled.png");
+      button2 = loadImage("data/button2_enabled.png");
     }
     else {
       drawBox(DEFAULT_BACKGROUND_COLOR, COLOR_BLACK, DEFAULT_BOTTOM_BUTTON2_GRAPHICS_WIDTH, DEFAULT_BOTTOM_BOX_GRAPHICS_HEIGHT);
-      button2 = loadImage("button2_disabled.png");
+      button2 = loadImage("data/button2_disabled.png");
     }
     image(button2, 2, 2);
     popMatrix();

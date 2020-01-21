@@ -37,10 +37,10 @@ static int COLOR_BLUE                     = #000099;
 static int CLEAR_COLOR                    = COLOR_WHITE;
 static int DEFAULT_DATES_FONT_COLOR       = COLOR_WHITE;
 
-static String deathDaysFilePath           = "deathdays.txt";
-static String deathsAgeMFPath             = "deaths.age.mf.txt";
-static String pumpsPath                   = "pumps.txt";
-static String streetsPath                 = "streets.txt";
+static String deathDaysFilePath           = "data/deathdays.txt";
+static String deathsAgeMFPath             = "data/deaths.age.mf.txt";
+static String pumpsPath                   = "data/pumps.txt";
+static String streetsPath                 = "data/streets.txt";
 
 // Boxes
 static int DEFAULT_LEFT_BOX_WIDTH         = 30;
@@ -145,7 +145,7 @@ static int DEFAULT_CIRLE_RADIUS           = 7;
 static int DEFAULT_ENABLED_COLOR          = #666666;
 
 // Images used
-static String DEFAULT_STREET_NAMES_PATH   = "streetNames_smaller.png";
+static String DEFAULT_STREET_NAMES_PATH   = "data/streetNames_smaller.png";
 
 static void initializeArray(float[] arrayInit) {
   for(int i = 0; i < arrayInit.length; i++ ) {
